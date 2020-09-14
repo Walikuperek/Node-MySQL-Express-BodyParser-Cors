@@ -45,7 +45,7 @@ Item.selectById = (id, returnData) => {
 	);
 };
 
-// Get Item by Name - SEARCH FIELD FOR ALL
+// Get Item by Name - SEARCH FIELD
 Item.selectByName = (name, returnData) => {
 	sql.query(
 		`SELECT * FROM items 
