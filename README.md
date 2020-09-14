@@ -8,21 +8,45 @@ Node.js backend for Tattoo Studio project
 ## REST routes
 > Items
 ```
-/items               // get all items
+/items               // get all items (GET)
 ```
 ```
-/items/:id           // get item by id
+/items/:id           // get item by id (GET)
 ```
 ```
-/items/search/:name  // search by name (search field)
+/items/search/:name  // search (search field) (GET)
+```
+```
+/items/type/:type    // get by type (GET)
+```
+```
+/items/subtype/:subtype       // get by subtype (GET)
+```
+```
+/items/subsubtype/:subsubtype // get by subsubtype (GET)
 ```
 
 > Clients
 ```
-/clients             // get all clients
+/clients              // get all clients (GET)
 ```
 ```
-/clients             // post a client into database
+/clients              // post a client into database (POST)
+```
+```
+/clients/:id          // get a client by id (GET)
+```
+```
+/clients/search/:word // search (search field) (GET)
+```
+```
+/clients/:id          // update client with id (PUT)
+```
+```
+/clients/:id          // delete client with id (DELETE)
+```
+```
+/clients              // delete all clients (DELETE)
 ```
 
 ## NPM packages
