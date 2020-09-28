@@ -2,8 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 
-// Set port for app
-const PORT = 3000;
+/* 
+ Set port for app
+  You have access to process.env object, 
+  You can override it like: `PORT=4000 node server.js` 
+*/
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 var corsOptions = {
@@ -28,6 +32,7 @@ app.get('/', (req, res) => {
 
 require('./app/routes/item.routes')(app);
 require('./app/routes/client.routes')(app);
+require('./app/routes/order.routes')(app);
 
 // Listen for requests
 app.listen(PORT, () => {

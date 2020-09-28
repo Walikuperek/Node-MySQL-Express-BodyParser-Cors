@@ -4,7 +4,7 @@ module.exports = app => {
   // Get all Items
   app.get('/items', Items.getAll);
 
-  // Get a Cartridge by ID
+  // Get Item by ID
   app.get('/items/:id', Items.getById);
 
   // Search by name
