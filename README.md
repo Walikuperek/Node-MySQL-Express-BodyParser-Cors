@@ -49,6 +49,20 @@ Node.js backend for Tattoo Studio project
 /clients              // delete all clients (DELETE)
 ```
 
+> Orders
+```
+/orders               // get all orders (GET)
+```
+```
+/orders/paid          // get all paid orders (GET)
+```
+```
+/orders/unpaid        // get all unpaid orders (GET)
+```
+```
+/orders/:id           // get order by id (GET)
+```
+
 ## NPM packages
 * server: express
 * database connection: mysql
@@ -110,15 +124,16 @@ TextRow
 ### Project pre-setup
 ```
 make mysql database named - inventory
-make table at 'inventory' - items
-make 
+'inventory' -> make table named - items
+'inventory' -> make table named - clients
+'inventory' -> make table named - orders
 ```
 
 ### Structure of database
 ```
 *--DB: inventory
 |
-|
+# Data INSERT INTO items [Web-Scrap-Puppeteer-MySQL](https://github.com/Walikuperek/Web-Scrap-Puppeteer-MySQL)
 *----TABLE: items
 |______________ID: INT(11) AI PRIMARY KEY
 |___________Shop: STRING/TEXT
@@ -129,9 +144,9 @@ make
 |____PriceBrutto: STRING/TEXT
 |___________Link: STRING/TEXT
 |
-|
+# Add data with [Angular](https://github.com/Walikuperek/Angular-9.1.0-Tattoo-Studio-CRM)
 *----TABLE: clients
-|_______ClientId: INT AI PRIMARY KEY
+|_______ClientId: INT(11) AI PRIMARY KEY
 |______FirstName: VARCHAR(255) 
 |_______LastName: VARCHAR(255)  
 |________Comment: VARCHAR(255) 
@@ -144,7 +159,21 @@ make
 |________Twitter: VARCHAR(255)      
 |__________Viber: VARCHAR(255)        
 |_____________Vk: VARCHAR(255)           
-|______AddedDate: DATE    
+|______AddedDate: DATE
+|
+# Add data with [Angular](https://github.com/Walikuperek/Angular-9.1.0-Tattoo-Studio-CRM)
+*----TABLE: orders
+|________OrderID: INT AI PRIMARY KEY
+|_______ClientID: INT(11)
+|__________Price: INT(11)  
+|________Advance: INT(11) 
+|_______Discount: INT(3) # max 100(%)        
+|_________Status: VARCHAR(255) utf8mb4_polish_ci          
+|___________Year: INT(4)      
+|__________Month: INT(2)     
+|____________Day: INT(2)  
+|
+*
 ```
 
 ### Project setup
