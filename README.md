@@ -129,11 +129,15 @@ make mysql database named - inventory
 'inventory' -> make table named - orders
 ```
 
+### Filling 'items' table via Puppeteer bot
+* Data INSERT INTO items [Web-Scrap-Puppeteer-MySQL](https://github.com/Walikuperek/Web-Scrap-Puppeteer-MySQL)
+
+
 ### Structure of database
 ```
 *--DB: inventory
 |
-# Data INSERT INTO items [Web-Scrap-Puppeteer-MySQL](https://github.com/Walikuperek/Web-Scrap-Puppeteer-MySQL)
+|
 *----TABLE: items
 |______________ID: INT(11) AI PRIMARY KEY
 |___________Shop: STRING/TEXT
@@ -144,7 +148,7 @@ make mysql database named - inventory
 |____PriceBrutto: STRING/TEXT
 |___________Link: STRING/TEXT
 |
-# Add data with [Angular](https://github.com/Walikuperek/Angular-9.1.0-Tattoo-Studio-CRM)
+|
 *----TABLE: clients
 |_______ClientId: INT(11) AI PRIMARY KEY
 |______FirstName: VARCHAR(255) 
@@ -161,7 +165,7 @@ make mysql database named - inventory
 |_____________Vk: VARCHAR(255)           
 |______AddedDate: DATE
 |
-# Add data with [Angular](https://github.com/Walikuperek/Angular-9.1.0-Tattoo-Studio-CRM)
+|
 *----TABLE: orders
 |________OrderID: INT AI PRIMARY KEY
 |_______ClientID: INT(11)
